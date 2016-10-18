@@ -17,8 +17,11 @@ namespace TicketProject.Controllers
         {
             return View();
         }
+        public ActionResult Navbar()
+        {
+            return View();
+        }
 
-        
 
         public ActionResult Home()
         {
