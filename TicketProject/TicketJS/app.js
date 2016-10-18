@@ -2,12 +2,16 @@
 
 app.config(function ($stateProvider) {
 
-    $stateProvider.state('/', {
-        template: 'Home/Index',
-        controller: "OpenTicketController"
-    })
-    .state('/OpenTicket', {
-        template: 'Home/OpenTicket',
-        controller: "OpenTicketController"
-    })
+        .when("/", {
+            templateUrl: "Home/Home"
+        })
+          .when("/AllTicket", {
+              templateUrl: "Ticket/AllTicket"
+          })
+         .when("/OpenTicket", {
+             templateUrl: "Ticket/OpenTicket"
+         })
+        .otherwise({
+            templateUrl: "/"
+        })
 });

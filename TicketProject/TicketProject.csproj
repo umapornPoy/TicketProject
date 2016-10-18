@@ -133,6 +133,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Css\table.css" />
+    <Content Include="Css\table2.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
@@ -929,6 +931,7 @@
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="Table\angular-datatables.min.js" />
     <Content Include="Template\bootstrap\css\bootstrap.css" />
     <Content Include="Template\bootstrap\css\bootstrap.min.css" />
     <Content Include="Template\bootstrap\fonts\glyphicons-halflings-regular.svg" />
@@ -1994,6 +1997,7 @@
     <Content Include="Views\Ticket\AllTicket.cshtml" />
     <Content Include="Views\Ticket\OpenTicket.cshtml" />
     <Content Include="Views\Home\Sidebar.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

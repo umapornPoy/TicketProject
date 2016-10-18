@@ -19,5 +19,10 @@ namespace TicketProject.Controllers
         }
 
         
+
+        public ActionResult Home()
+        {
+            return View();
+        }
     }
 }
