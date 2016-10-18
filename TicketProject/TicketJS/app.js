@@ -1,7 +1,6 @@
 ﻿var app = angular.module('Ticket', ['ngRoute', 'AxelSoft', 'ui.router']);
 
 app.config(function ($stateProvider) {
-
         .when("/", {
             templateUrl: "Home/Home"
         })
