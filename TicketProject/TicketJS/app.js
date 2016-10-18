@@ -8,6 +8,9 @@ app.config(function ($routeProvider) {
           .when("/AllTicket", {
               templateUrl: "Ticket/AllTicket"
           })
+         .when("/OpenTicket", {
+             templateUrl: "Ticket/OpenTicket"
+         })
         .otherwise({
             templateUrl: "/"
         })
