@@ -1,4 +1,4 @@
-﻿var app = angular.module('Ticket', ['ngRoute', 'ui.bootstrap']);
+﻿var app = angular.module('Ticket', ['ngRoute']);
 app.config(function ($routeProvider) {
     $routeProvider
 
@@ -8,6 +8,9 @@ app.config(function ($routeProvider) {
           .when("/AllTicket", {
               templateUrl: "Ticket/AllTicket"
           })
+         .when("/OpenTicket", {
+             templateUrl: "Ticket/OpenTicket"
+         })
         .otherwise({
             templateUrl: "/"
         })
