@@ -1,17 +1,14 @@
-﻿var app = angular.module('Ticket', ['ngRoute', 'AxelSoft', 'ui.router']);
+﻿/// <reference path="Ticket/OpenTicket.js" />
+/// <reference path="Ticket/OpenTicket.js" />
+var app = angular.module('Ticket', ['AxelSoft', 'oc.lazyLoad', 'ui.router']);
 
-app.config(function ($stateProvider) {
+app.config(function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
 
-        .when("/", {
-            templateUrl: "Home/Home"
-        })
-          .when("/AllTicket", {
-              templateUrl: "Ticket/AllTicket"
-          })
-         .when("/OpenTicket", {
-             templateUrl: "Ticket/OpenTicket"
-         })
-        .otherwise({
-            templateUrl: "/"
-        })
-});
+    $urlRouterProvider.otherwise("/")
+    $stateProvider.state('/eee', {
+        url: "/sss",
+        templateUrl: '/Ticket/AllTicket',
+        controller: 'OpenTicketController',
+       
+    })
+})

@@ -931,6 +931,8 @@
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\uI-route\ocLazyLoad.js" />
+    <Content Include="scripts\uI-route\ui-router.js" />
     <Content Include="Table\angular-datatables.min.js" />
     <Content Include="Template\bootstrap\css\bootstrap.css" />
     <Content Include="Template\bootstrap\css\bootstrap.min.css" />
@@ -1998,6 +2000,7 @@
     <Content Include="Views\Ticket\OpenTicket.cshtml" />
     <Content Include="Views\Home\Sidebar.cshtml" />
     <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Home\Navbar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
