@@ -31,6 +31,11 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="~/Template/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
+
+    <link rel="stylesheet" href="~/Template/plugins/datatables/dataTables.bootstrap.css">
+    <link href="~/Css/table.css" rel="stylesheet" />
+    <link href="~/Css/table2.css" rel="stylesheet" />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -510,12 +515,7 @@
             <!-- /.sidebar -->
         </aside>
 
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->           
-            <div ng-view>
-            </div>          
-        </div>
+
         <!-- /.content-wrapper -->
         <footer class="main-footer">
             <div class="pull-right hidden-xs">
@@ -720,15 +720,15 @@
         <div class="control-sidebar-bg"></div>
     </div>
     <!-- ./wrapper -->
-
-    <script src="~/scripts/angular.js"></script>
-    <script src="~/scripts/angular.min.js"></script>
-    <script src="~/scripts/angular-sanitize.js"></script>
-    <script src="~/scripts/angular-route.min.js"></script>
-    <script src="~/TicketJS/app.js"></script>
-
     <!-- jQuery 2.2.3 -->
     <script src="~/Template/plugins/jQuery/jquery-2.2.3.min.js"></script>
+
+    <script src="~/scripts/angular.js"></script>
+    <script src="~/scripts/angular-sanitize.js"></script>
+    <script src="~/scripts/angular-route.min.js"></script>
+    <script src="~/Table/angular-datatables.min.js"></script>
+    <script src="~/TicketJS/app.js"></script>
+    
     <!-- jQuery UI 1.11.4 -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -764,5 +764,9 @@
     <script src="~/Template/dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="~/Template/dist/js/demo.js"></script>
+
+    <script src="~/Template/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Template/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
 </body>
 </html>

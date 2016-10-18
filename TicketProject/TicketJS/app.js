@@ -1,4 +1,4 @@
-﻿var app = angular.module('Ticket', ['ngRoute', 'ui.bootstrap']);
+﻿var app = angular.module('Ticket', ['ngRoute', 'datatables']);
 app.config(function ($routeProvider) {
     $routeProvider
 
