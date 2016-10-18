@@ -5,7 +5,9 @@ app.config(function ($routeProvider) {
         .when("/", {
             templateUrl: "Home/Index"
         })
-         
+          .when("/AllTicket", {
+              templateUrl: "Ticket/AllTicket"
+          })
         .otherwise({
             templateUrl: "/"
         })
