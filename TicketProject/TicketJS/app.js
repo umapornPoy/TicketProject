@@ -1,17 +1,13 @@
-﻿var app = angular.module('Ticket', ['ngRoute']);
-app.config(function ($routeProvider) {
-    $routeProvider
+﻿var app = angular.module('Ticket', ['ngRoute', 'AxelSoft', 'ui.router']);
 
-        .when("/", {
-            templateUrl: "Home/Index"
-        })
-          .when("/AllTicket", {
-              templateUrl: "Ticket/AllTicket"
-          })
-         .when("/OpenTicket", {
-             templateUrl: "Ticket/OpenTicket"
-         })
-        .otherwise({
-            templateUrl: "/"
-        })
+app.config(function ($stateProvider) {
+
+    $stateProvider.state('/', {
+        template: 'Home/Index',
+        controller: "OpenTicketController"
+    })
+    .state('/OpenTicket', {
+        template: 'Home/OpenTicket',
+        controller: "OpenTicketController"
+    })
 });
