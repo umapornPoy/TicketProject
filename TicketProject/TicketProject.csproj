@@ -1993,6 +1993,7 @@
     <Content Include="scripts\version.json" />
     <Content Include="Views\Ticket\AllTicket.cshtml" />
     <Content Include="Views\Ticket\OpenTicket.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

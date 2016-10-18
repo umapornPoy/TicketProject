@@ -3,7 +3,7 @@ app.config(function ($routeProvider) {
     $routeProvider
 
         .when("/", {
-            templateUrl: "Home/Index"
+            templateUrl: "Home/Home"
         })
           .when("/AllTicket", {
               templateUrl: "Ticket/AllTicket"
