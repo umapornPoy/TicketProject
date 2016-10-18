@@ -1859,9 +1859,6 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Template\bootstrap\css\bootstrap.css.map" />
     <Content Include="Template\bootstrap\css\bootstrap.min.css.map" />
     <Content Include="Template\bootstrap\fonts\glyphicons-halflings-regular.eot" />
