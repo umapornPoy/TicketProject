@@ -1852,6 +1852,7 @@
     <Content Include="Template\plugins\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Template\plugins\timepicker\bootstrap-timepicker.min.js" />
     <Content Include="TicketJS\app.js" />
+    <Content Include="TicketJS\TicketApp.js" />
     <Content Include="TicketJS\Ticket\OpenTicket.js" />
     <Content Include="Web.config" />
   </ItemGroup>
