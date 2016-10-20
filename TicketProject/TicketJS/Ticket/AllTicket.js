@@ -1,4 +1,11 @@
-﻿angular.module('TicketApp').controller('AllTicketController', ['$scope', function ($scope) {
+﻿angular.module('TicketApp').controller('AllTicketController', ['$scope', '$http', function ($scope, $http) {
+
+    $http.get("http://localhost:55795/api/TicketApi/ticketInfo").success(function (data) {
+        $scope.TicketInfo = data;
+        console.log($scope.TicketInfo);
+
+        $scope.Merchant = " http://localhost:55795/api/MerchantApi/ListMerchant";
+
     $scope.showColumnLines = false;
     $scope.showRowLines = true;
     $scope.showBorders = true;
@@ -282,7 +289,8 @@
     }];
 
     $scope.dataGridOptions = {
-        dataSource: employees,
+        dataSource: $scope.TicketInfo,
+        
         paging: {
             enabled: false
         },
@@ -295,35 +303,72 @@
         searchPanel: {
             visible: true
         },
+        paging: {
+            pageSize: 12
+        },
+        pager: {
+            showPageSizeSelector: true,
+            allowedPageSizes: [8, 12, 20]
+        },
+        
         columns: [
             {
-                dataField: "Prefix",
-                caption: "Title"
+                dataField: "MerchantName",
+                caption: "Merchant Name"
+
             },
-            "FirstName",
-            "LastName",
             {
-                dataField: "Position",
+                dataField: "TicketNumber",
+                caption: "Ticket Info"
+            },
+            
+            "Ticket Group",
+            {
+                dataField: "Open By",
                 width: 130
-            }, {
-                dataField: "StateID",
-                caption: "State",
-                width: 125,
-                lookup: {
-                    dataSource: states,
-                    displayExpr: "Name",
-                    valueExpr: "ID"
+            },
+            {
+                dataField: "OpenDate",
+                caption: "Open Date",
+                width: 150,
+               
+            }//, {
+               // dataField: "BirthDate",
+               // dataType: "date",
+               // width: 125
+           // }
+           , {
+               dataField: "Status",
+                width: 80,
+                alignment: "center",
+                cellTemplate: function (container, item) {
+                    var data = item.data,
+                        markup = "<div class='hidden-sm hidden-xs btn-group'>"
+                                + "<button class='btn btn-warning btn-xs btn-round' onclick='EditDistributorsVendor(" + data.VendorID + ")'>"
+                                + "<i class='ace-icon fa fa-pencil icon-only bigger-120'></i>"
+                                + "</button></div>";
+                    container.append(markup);
                 }
             }, {
-                dataField: "BirthDate",
-                dataType: "date",
-                width: 125
-            },
+                caption: "Action",
+                dataField: "delete",
+                width: 80,
+                alignment: "center",
+                cellTemplate: function (container, item) {
+                    var data = item.data,
+                        markup = "<div class='hidden-sm hidden-xs btn-group'>"
+                                + "<a class='btn btn-danger btn-xs btn-round' onclick='DeleteDistributorsVendor(" + data.VendorID + ")'>"
+                                + "<i class='ace-icon fa fa-trash icon-only bigger-120'></i>"
+                                + "</a></div>";
+                    container.append(markup);
+                }
+            }
         ]
+
     };
 
 
 
-
+    });
     
 }]);
