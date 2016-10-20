@@ -1,90 +1,207 @@
-﻿<section class="content-header">
-    <h1>
-        Manage Ticket
-        <small>19 October 2016</small>
-    </h1>
-    <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
-    </ol>
-</section>
-<div ng-controller="OpenTicketController">
-    <!-- SELECT2 EXAMPLE -->
-    <div class="col-md-12">
-        <!-- Horizontal Form -->
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <h3 class="box-title">Open Ticket</h3>
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form class="form-horizontal">
-                <div class="box-body">
-                    <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-3 control-label">Merchant Name <span style="color:red">*</span> : </label>
-                        <div class="col-sm-8">
-                            <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit">
-                            </div>
+﻿
+                <div class="page-content" ng-controller="OpenTicketController">
+                    <div class="page-header">
+                        <h1>
+                            Open Ticket
+                            <small>
+                                <i class="ace-icon fa fa-angle-double-right"></i>
+                                Date: 20 October 2016 , 10:10:24 AM
+                            </small>
+                        </h1>
+                    </div><!-- /.page-header -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <!-- SELECT2 EXAMPLE -->
+                            <!-- Horizontal Form -->
+                            <!-- /.box-header -->
+                            <!-- form start -->
+                            <form class="form-horizontal" role="form">
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Merchant Name <span style="color:red">*</span> : </label>
+                                    <div class="col-sm-9">
+                                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Brand Name <span style="color:red">*</span> : </label>
+                                    <div class="col-sm-9">
+                                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Shop Name <span style="color:red">*</span> : </label>
+                                    <div class="col-sm-9">
+                                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Contact Name  <span style="color:red">*</span> : </label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="form-field-1" placeholder="Contact Name " class="col-xs-10 col-sm-5" />
+                                    </div>
+                                </div>
+  
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Mobile : </label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="form-field-1" placeholder="Enter Mobile" class="col-xs-10 col-sm-5" />
+                                    </div>
+                                </div>
+                             
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Ticket Group : </label>
+                                    <div class="col-sm-9">
+                                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Ticket Subject <span style="color:red">*</span> :  </label>
+                                    <div class="col-sm-9">
+                                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
+                                    </div>
+                                </div>
+                              
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Ticket Detail  <span style="color:red">*</span> :  </label>
+                                    <div class="col-sm-6">
+                                        <summernote height="200"></summernote>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Upload file : </label>
+                                    <div class="col-sm-6">
+                                        <p>Maximum file size : 5 MB , Permitted file type : pdf , ppt , doc , xls , xlsx , txt , png , gif , jpg , jpeg , zip , rar , 7z , csv , wma , wmv</p>
+                                        <input multiple="" type="file" id="id-input-file-3" />
+                                    </div>
+                                </div>
+                
+                                <div class="clearfix form-actions">
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button class="btn btn-info" type="button">
+                                            <i class="ace-icon fa fa-check bigger-110"></i>
+                                            Submit
+                                        </button>
+
+                                        &nbsp; &nbsp; &nbsp;
+                                        <button class="btn" type="reset">
+                                            <i class="ace-icon fa fa-undo bigger-110"></i>
+                                            Reset
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- /.box-footer -->
+                            </form>
+                            <!-- /.box -->
+
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-3 control-label">Brand Name <span style="color:red">*</span> : </label>
-                        <div class="col-sm-8">
-                            <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-3 control-label">Shop Name  <span style="color:red">*</span> : </label>
-                        <div class="col-sm-8">
-                            <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-3 control-label">Contact Name  <span style="color:red">*</span> : </label>
-                        <div class="col-sm-3">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-3 control-label">Mobile : </label>
-                        <div class="col-sm-3">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-3 control-label">Mobile : </label>
-                        <div class="col-sm-3">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-3 control-label">Ticket Group : </label>
-                        <div class="col-sm-8">
-                            <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-3 control-label">Ticket Subject <span style="color:red">*</span> :  </label>
-                        <div class="col-sm-3">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                        </div>
-                    </div>
-
-                    <summernote height="300"></summernote>
                 </div>
-                <!-- /.box-footer -->
-            </form>
-        </div>
-        <!-- /.box -->
-    </div>
-</div>
+
+    <script type="text/javascript">
+        jQuery(function ($) {
+
+            $('#id-input-file-3').ace_file_input({
+                style: 'well',
+                btn_choose: 'Drop files here or click to choose',
+                btn_change: null,
+                no_icon: 'ace-icon fa fa-cloud-upload',
+                droppable: true,
+                thumbnail: 'small'//large | fit
+                //,icon_remove:null//set null, to hide remove/reset button
+                /**,before_change:function(files, dropped) {
+                    //Check an example below
+                    //or examples/file-upload.html
+                    return true;
+                }*/
+                /**,before_remove : function() {
+                    return true;
+                }*/
+                ,
+                preview_error: function (filename, error_code) {
+                    //name of the file that failed
+                    //error_code values
+                    //1 = 'FILE_LOAD_FAILED',
+                    //2 = 'IMAGE_LOAD_FAILED',
+                    //3 = 'THUMBNAIL_FAILED'
+                    //alert(error_code);
+                }
+
+            }).on('change', function () {
+                //console.log($(this).data('ace_input_files'));
+                //console.log($(this).data('ace_input_method'));
+            });
+
+
+
+
+
+            //dynamically change allowed formats by changing allowExt && allowMime function
+            $('#id-file-format').removeAttr('checked').on('change', function () {
+                var whitelist_ext, whitelist_mime;
+                var btn_choose
+                var no_icon
+                if (this.checked) {
+                    btn_choose = "Drop images here or click to choose";
+                    no_icon = "ace-icon fa fa-picture-o";
+
+                    whitelist_ext = ["jpeg", "jpg", "png", "gif", "bmp"];
+                    whitelist_mime = ["image/jpg", "image/jpeg", "image/png", "image/gif", "image/bmp"];
+                }
+                else {
+                    btn_choose = "Drop files here or click to choose";
+                    no_icon = "ace-icon fa fa-cloud-upload";
+
+                    whitelist_ext = null;//all extensions are acceptable
+                    whitelist_mime = null;//all mimes are acceptable
+                }
+                var file_input = $('#id-input-file-3');
+                file_input
+                .ace_file_input('update_settings',
+                {
+                    'btn_choose': btn_choose,
+                    'no_icon': no_icon,
+                    'allowExt': whitelist_ext,
+                    'allowMime': whitelist_mime
+                })
+                file_input.ace_file_input('reset_input');
+
+                file_input
+                .off('file.error.ace')
+                .on('file.error.ace', function (e, info) {
+                    //console.log(info.file_count);//number of selected files
+                    //console.log(info.invalid_count);//number of invalid files
+                    //console.log(info.error_list);//a list of errors in the following format
+
+                    //info.error_count['ext']
+                    //info.error_count['mime']
+                    //info.error_count['size']
+
+                    //info.error_list['ext']  = [list of file names with invalid extension]
+                    //info.error_list['mime'] = [list of file names with invalid mimetype]
+                    //info.error_list['size'] = [list of file names with invalid size]
+
+
+                    /**
+                    if( !info.dropped ) {
+                        //perhapse reset file field if files have been selected, and there are invalid files among them
+                        //when files are dropped, only valid files will be added to our file array
+                        e.preventDefault();//it will rest input
+                    }
+                    */
+
+                    //if files have been selected (not dropped), you can choose to reset input
+                    //because browser keeps all selected files anyway and this cannot be changed
+                    //we can only reset file field to become empty again
+                    //on any case you still should check files with your server side script
+                    //because any arbitrary file can be uploaded by user and it's not safe to rely on browser-side measures
+                });
+            });
+        });
+    </script>

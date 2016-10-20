@@ -168,6 +168,7 @@
     <Content Include="scripts\angular-cookies.js" />
     <Content Include="scripts\angular-cookies.min.js" />
     <Content Include="scripts\angular-csp.css" />
+    <Content Include="scripts\angular-datatables.scroller.min.js" />
     <Content Include="scripts\angular-loader.js" />
     <Content Include="scripts\angular-loader.min.js" />
     <Content Include="scripts\angular-message-format.js" />
@@ -982,6 +983,10 @@
     <Content Include="scripts\jszip.js" />
     <Content Include="scripts\jszip.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\summernote\angular-summernote.min.js" />
+    <Content Include="scripts\summernote\summernote.css" />
+    <Content Include="scripts\summernote\summernote.min.js" />
+    <Content Include="scripts\Table\angular-datatables.min.js" />
     <Content Include="scripts\uI-route\ocLazyLoad.js" />
     <Content Include="scripts\uI-route\ui-router.js" />
     <Content Include="scripts\vectormap-data\africa.js" />
@@ -3766,6 +3771,9 @@
     <Content Include="Template\components\raty\lib\fonts\raty.eot" />
     <Content Include="Template\components\raty\lib\fonts\raty.ttf" />
     <Content Include="Template\components\raty\lib\fonts\raty.woff" />
+    <Content Include="scripts\summernote\font\summernote.eot" />
+    <Content Include="scripts\summernote\font\summernote.ttf" />
+    <Content Include="scripts\summernote\font\summernote.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,4 +1,4 @@
-﻿var app = angular.module('TicketApp', ['ngRoute', 'dx']);
+﻿var app = angular.module('TicketApp', ['ngRoute', 'dx', 'summernote', 'AxelSoft']);
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
