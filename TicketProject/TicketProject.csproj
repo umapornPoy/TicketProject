@@ -984,8 +984,8 @@
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="scripts\Table\angular-datatables.min.js" />
     <Content Include="scripts\angular-datatables.scroller.min.js" />
-    <Content Include="scripts\uI-route\ocLazyLoad.js" />
-    <Content Include="scripts\uI-route\ui-router.js" />
+    <Content Include="scripts\ui-route\ui-router.js" />
+    <Content Include="scripts\ui-route\ui-router.min.js" />
     <Content Include="scripts\vectormap-data\africa.js" />
     <Content Include="scripts\vectormap-data\canada.js" />
     <Content Include="scripts\vectormap-data\eurasia.js" />
