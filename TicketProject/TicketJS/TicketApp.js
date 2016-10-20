@@ -1,6 +1,6 @@
 ﻿/// <reference path="Ticket/OpenTicket.js" />
 /// <reference path="Ticket/OpenTicket.js" />
-var app = angular.module('TicketApp', ['ui.router', 'oc.lazyLoad', 'dx']);
+var app = angular.module('TicketApp', ['ui.router', 'oc.lazyLoad', 'dx', 'summernote', 'AxelSoft']);
 app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
 
         $urlRouterProvider.otherwise("/")
