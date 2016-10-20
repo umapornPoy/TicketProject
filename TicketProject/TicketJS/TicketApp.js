@@ -1,4 +1,4 @@
-﻿var app = angular.module('TicketApp', ['ngRoute']);
+﻿var app = angular.module('TicketApp', ['ngRoute', 'dx']);
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
