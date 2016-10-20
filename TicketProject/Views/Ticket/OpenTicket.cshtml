@@ -1,110 +1,115 @@
-﻿
-                <div class="page-content" ng-controller="OpenTicketController">
-                    <div class="page-header">
-                        <h1>
-                            Open Ticket
-                            <small>
-                                <i class="ace-icon fa fa-angle-double-right"></i>
-                                Date: 20 October 2016 , 10:10:24 AM
-                            </small>
-                        </h1>
-                    </div><!-- /.page-header -->
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <!-- SELECT2 EXAMPLE -->
-                            <!-- Horizontal Form -->
-                            <!-- /.box-header -->
-                            <!-- form start -->
-                            <form class="form-horizontal" role="form">
-
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Merchant Name <span style="color:red">*</span> : </label>
-                                    <div class="col-sm-9">
-                                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Brand Name <span style="color:red">*</span> : </label>
-                                    <div class="col-sm-9">
-                                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Shop Name <span style="color:red">*</span> : </label>
-                                    <div class="col-sm-9">
-                                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Contact Name  <span style="color:red">*</span> : </label>
-                                    <div class="col-sm-9">
-                                        <input type="text" id="form-field-1" placeholder="Contact Name " class="col-xs-10 col-sm-5" />
-                                    </div>
-                                </div>
-  
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Mobile : </label>
-                                    <div class="col-sm-9">
-                                        <input type="text" id="form-field-1" placeholder="Enter Mobile" class="col-xs-10 col-sm-5" />
-                                    </div>
-                                </div>
-                             
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Ticket Group : </label>
-                                    <div class="col-sm-9">
-                                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Ticket Subject <span style="color:red">*</span> :  </label>
-                                    <div class="col-sm-9">
-                                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
-                                    </div>
-                                </div>
-                              
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Ticket Detail  <span style="color:red">*</span> :  </label>
-                                    <div class="col-sm-6">
-                                        <summernote height="200"></summernote>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Upload file : </label>
-                                    <div class="col-sm-6">
-                                        <p>Maximum file size : 5 MB , Permitted file type : pdf , ppt , doc , xls , xlsx , txt , png , gif , jpg , jpeg , zip , rar , 7z , csv , wma , wmv</p>
-                                        <input multiple="" type="file" id="id-input-file-3" />
-                                    </div>
-                                </div>
-                
-                                <div class="clearfix form-actions">
-                                    <div class="col-md-offset-3 col-md-9">
-                                        <button class="btn btn-info" type="button">
-                                            <i class="ace-icon fa fa-check bigger-110"></i>
-                                            Submit
-                                        </button>
-
-                                        &nbsp; &nbsp; &nbsp;
-                                        <button class="btn" type="reset">
-                                            <i class="ace-icon fa fa-undo bigger-110"></i>
-                                            Reset
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- /.box-footer -->
-                            </form>
-                            <!-- /.box -->
-
-                        </div>
+﻿<div class="page-content" ng-controller="OpenTicketController">
+    <div class="page-header">
+        <h1>Open Ticket
+        <small><i class="ace-icon fa fa-angle-double-right"></i>
+                Date: 20 October 2016 , 10:10:24 AM</small>
+        </h1>
+    </div><!-- /.page-header -->
+    <div class="row">
+        <div class="col-xs-12">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Open Ticket By : </label>
+                    <div class="col-sm-9">
+                        <h5>Nisakarn</h5>
                     </div>
                 </div>
 
-    <script type="text/javascript">
+                <div class="form-group ">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Merchant Name <span style="color:red">*</span> : </label>
+                    <div class="col-sm-9 has-error">
+                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
+                        <div class="help-block col-xs-12 col-sm-reset inline ">  Merchant Name is required. </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Brand Name <span style="color:red">*</span> : </label>
+                    <div class="col-sm-9 has-error">
+                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
+                        <div class="help-block col-xs-12 col-sm-reset inline ">  Brand Name is required. </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Shop Name <span style="color:red">*</span> : </label>
+                    <div class="col-sm-9 has-error">
+                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
+                        <div class="help-block col-xs-12 col-sm-reset inline ">  Shop Name is required.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Contact Name  <span style="color:red">*</span> : </label>
+                    <div class="col-sm-9 has-error">
+                        <input type="text" id="form-field-1" placeholder="Contact Name " class="col-xs-10 col-sm-5" />
+                        <div class="help-block col-xs-12 col-sm-reset inline ">  Contact Name is required.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Mobile : </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="form-field-1" placeholder="Enter Mobile" class="col-xs-10 col-sm-5" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Ticket Group : </label>
+                    <div class="col-sm-9">
+                        <div custom-select="f for f in fruits| filter: $searchTerm" ng-model="fruit"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Ticket Subject <span style="color:red">*</span> :  </label>
+                    <div class="col-sm-9 has-error">
+                        <input type="text" id="form-field-1" placeholder="Enter Ticket Subject" class="col-xs-10 col-sm-5" />
+                        <div class="help-block col-xs-12 col-sm-reset inline ">  Ticket Name is required.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Ticket Detail  <span style="color:red">*</span> : </label>
+                    <div class="col-sm-6 has-error">
+                        <summernote height="200"></summernote>
+                        <div class="help-block col-xs-12 col-sm-reset inline ">  Ticket Detail is required.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Upload file : </label>
+                    <div class="col-sm-6">
+                        <p>Maximum file size : 5 MB , Permitted file type : pdf , ppt , doc , xls , xlsx , txt , png , gif , jpg , jpeg , zip , rar , 7z , csv , wma , wmv</p>
+                        <input multiple="" type="file" id="id-input-file-3" />
+                    </div>
+                </div>
+
+                
+
+                <!-- /.box-footer -->
+            </form>
+            <!-- /.box -->
+            <div class="clearfix form-actions">
+                <div class="col-md-offset-4 col-md-9">
+                    <button class="btn btn-success" type="button">
+                        <i class="ace-icon fa fa-check bigger-110"></i>
+                        Submit
+                    </button>
+
+                    &nbsp; &nbsp; &nbsp;
+                    <button class="btn btn-danger" type="reset">
+                        <i class="ace-icon fa fa-backward bigger-110"></i>
+                        Back
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
         jQuery(function ($) {
 
             $('#id-input-file-3').ace_file_input({
@@ -204,4 +209,4 @@
                 });
             });
         });
-    </script>
+</script>
