@@ -931,6 +931,7 @@
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\summernote\angular-summernote.min.js" />
     <Content Include="scripts\uI-route\ocLazyLoad.js" />
     <Content Include="scripts\uI-route\ui-router.js" />
     <Content Include="Table\angular-datatables.min.js" />
