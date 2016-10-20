@@ -3,4 +3,8 @@
     $scope.setToMango = function () {
         $scope.fruit = 'mango';
     };
+    $scope.Brands = ['Demo', 'Kakashi', 'Nikuya', 'Oishi Buffet', 'Shabushi'];
+    $scope.setBrand = function () {
+        $scope.Brand = 'Demo';
+    };
 }])
