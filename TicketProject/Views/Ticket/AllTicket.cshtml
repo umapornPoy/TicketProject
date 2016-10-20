@@ -1,17 +1,14 @@
 ﻿<div class="page-header">
     <h1>
-        Dashboard
-        <small>
-            <i class="ace-icon fa fa-angle-double-right"></i>
-            overview &amp; stats
-        </small>
+        Search Panel
     </h1>
 </div><!-- /.page-header -->
 
-<div class="row" ng-controller="AllTicketController">
+<div class="row" >
     <div class="col-xs-12">
         
         <div class="demo-container">
+
             <div id="gridContainer" dx-data-grid="dataGridOptions"></div>
         </div>
 
@@ -19,8 +16,22 @@
 </div><!-- /.row -->
 
 <style>
-    #gridContainer {
+   #gridContainer {
     height: auto;
-    width: 100%;
+}
+
+#eventContainer {
+    border: 1px solid lightgray;
+    margin-top: 20px;
+    min-height: 50px; 
+    padding: 5px;
+}
+
+#eventContainer .eventLog {
+    margin-top: 5px;
+}
+
+#clearLog {
+    float: right;
 }
 </style>
