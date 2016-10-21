@@ -34,6 +34,19 @@ app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
                 }, ])
                     }]
                 }
+        }).state('Login', {
+            url: "/Login/Login",
+            templateUrl: 'Login/Login',
+            controller: 'LoginController',
+            resolve: {
+                lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+            {
+                name: 'AceApp',
+                files: ['TicketJS/Login/Login.js']
+            }, ])
+                }]
+            }
         })
 
 
