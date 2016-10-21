@@ -17,5 +17,9 @@ namespace TicketProject.Controllers
         {
             return View();
         }
+        public ActionResult ReplyTicket()
+        {
+            return View();
+        }
     }
 }

@@ -34,6 +34,19 @@ app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
                 }, ])
                     }]
                 }
+        }).state('ReplyTicket/:id', {
+            url: "/ReplyTicket/:id",
+            templateUrl: 'Ticket/ReplyTicket',
+            controller: 'ReplyTicketController',
+            resolve: {
+                lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+            {
+                name: 'AceApp',
+                files: ['TicketJS/Ticket/ReplyTicket.js']
+            }, ])
+                }]
+            }
         }).state('Login', {
             url: "/Login/Login",
             templateUrl: 'Login/Login',
