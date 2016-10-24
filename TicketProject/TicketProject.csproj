@@ -159,6 +159,7 @@
     <Content Include="Css\table\table.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Image\header_logo_synature.png" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="scripts\angular-animate.js" />
@@ -3411,12 +3412,14 @@
     <Content Include="TicketJS\TicketApp.js" />
     <Content Include="TicketJS\Ticket\AllTicket.js" />
     <Content Include="TicketJS\Ticket\OpenTicket.js" />
+    <Content Include="TicketJS\Ticket\ReplyTicket.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\TicketApi\MerchantApi.cs" />
     <Compile Include="Controllers\TicketApi\TicketController.cs" />
     <Compile Include="Controllers\TicketController.cs" />
@@ -3779,6 +3782,8 @@
     <Content Include="scripts\summernote\font\summernote.eot" />
     <Content Include="scripts\summernote\font\summernote.ttf" />
     <Content Include="scripts\summernote\font\summernote.woff" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Ticket\ReplyTicket.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
