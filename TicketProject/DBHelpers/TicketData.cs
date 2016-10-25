@@ -22,7 +22,7 @@ namespace TicketProject.DBHelpers
         {
             SqlConnection objConn = DBHelpers.ConnectDb(ref errMsg);
             string strSQL = "";
-             strSQL =   "\r\n  t.*,m.MerchantName,b.BrandName,c.ProductLevelName From  ticket_info t " +
+             strSQL =   "\r\n Select t.*,m.MerchantName,b.BrandName,c.ProductLevelName From  ticket_info t " +
                         "\r\n left join merchant_profile m on t.MerchantID = m.MerchantID " +
                         "\r\n left join brand_profile b on t.BrandID = b.BrandID " +
                         "\r\n left join productlevel c on t.ShopID = c.ProductLevelID " +
