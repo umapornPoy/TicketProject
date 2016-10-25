@@ -60,8 +60,8 @@ app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
             }, ])
                 }]
             }
-        }).state('MyTicket/:id', {
-            url: "/MyTicket/:id",
+        }).state('MyTicket', {
+            url: "/MyTicket",
             templateUrl: 'Ticket/MyTicket',
             controller: 'MyTicketController',
             resolve: {
@@ -73,8 +73,8 @@ app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
             }, ])
                 }]
             }
-        }).state('NotAssign/:id', {
-            url: "/MyTicket/:id",
+        }).state('NotAssign', {
+            url: "/NotAssign",
             templateUrl: 'Ticket/NotAssign',
             controller: 'NotAssignController',
             resolve: {
@@ -86,7 +86,7 @@ app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
             }, ])
                 }]
             }
-
+        })
 
     //$routeProvider
     //    .when("/", {
