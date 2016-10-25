@@ -60,7 +60,32 @@ app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
             }, ])
                 }]
             }
-        })
+        }).state('MyTicket/:id', {
+            url: "/MyTicket/:id",
+            templateUrl: 'Ticket/MyTicket',
+            controller: 'MyTicketController',
+            resolve: {
+                lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+            {
+                name: 'AceApp',
+                files: ['TicketJS/Ticket/MyTicket.js']
+            }, ])
+                }]
+            }
+        }).state('NotAssign/:id', {
+            url: "/MyTicket/:id",
+            templateUrl: 'Ticket/NotAssign',
+            controller: 'NotAssignController',
+            resolve: {
+                lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+            {
+                name: 'AceApp',
+                files: ['TicketJS/Ticket/NotAssign.js']
+            }, ])
+                }]
+            }
 
 
     //$routeProvider

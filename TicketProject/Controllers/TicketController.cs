@@ -21,5 +21,13 @@ namespace TicketProject.Controllers
         {
             return View();
         }
+        public ActionResult MyTicket()
+        {
+            return View();
+        }
+        public ActionResult NotAssign()
+        {
+            return View();
+        }
     }
 }

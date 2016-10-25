@@ -3411,6 +3411,8 @@
     <Content Include="TicketJS\app.js" />
     <Content Include="TicketJS\TicketApp.js" />
     <Content Include="TicketJS\Ticket\AllTicket.js" />
+    <Content Include="TicketJS\Ticket\MyTicket.js" />
+    <Content Include="TicketJS\Ticket\NotAssign.js" />
     <Content Include="TicketJS\Ticket\OpenTicket.js" />
     <Content Include="TicketJS\Ticket\ReplyTicket.js" />
     <Content Include="Web.config" />
@@ -3784,6 +3786,8 @@
     <Content Include="scripts\summernote\font\summernote.woff" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Ticket\ReplyTicket.cshtml" />
+    <Content Include="Views\Ticket\MyTicket.cshtml" />
+    <Content Include="Views\Ticket\NotAssign.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
