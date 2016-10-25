@@ -285,7 +285,7 @@
 
             <!-- #section:basics/navbar.user_menu -->
             <li class="light-blue dropdown-modal">
-                <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                <a data-toggle="dropdown" class="dropdown-toggle">
                     <img class="nav-user-photo" src="~/Template/assets/avatars/user.jpg" alt="Jason's Photo" />
                     <span class="user-info">
                         <small>Welcome,</small>
@@ -304,8 +304,8 @@
                     </li>
 
                     <li>
-                        <a href="profile.html">
-                            <i class="ace-icon fa fa-user"></i>
+                        <a ui-sref="Profile">
+                            <i class="ace-icon fa fa-user" ></i>
                             Profile
                         </a>
                     </li>
@@ -313,8 +313,8 @@
                     <li class="divider"></li>
 
                     <li>
-                        <a href="#">
-                            <i ui-sref="Login/Login" class="ace-icon fa fa-power-off" ></i>
+                        <a href="/Login/Login">
+                            <i class="ace-icon fa fa-power-off" ></i>
                             Logout
                         </a>
                     </li>

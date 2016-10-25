@@ -47,19 +47,7 @@ app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
             }, ])
                 }]
             }
-        }).state('Login', {
-            url: "/Login/Login",
-            templateUrl: 'Login/Login',
-            controller: 'LoginController',
-            resolve: {
-                lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
-                    return $ocLazyLoad.load([
-            {
-                name: 'AceApp',
-                files: ['TicketJS/Login/Login.js']
-            }, ])
-                }]
-            }
+      
         }).state('MyTicket', {
             url: "/MyTicket",
             templateUrl: 'Ticket/MyTicket',
@@ -86,6 +74,20 @@ app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
             }, ])
                 }]
             }
+
+        }).state('Profile', {
+            url: "/Profile",
+            templateUrl: 'Home/Profile',
+            //controller: 'HomeController',
+            //resolve: {
+            //    lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+            //        return $ocLazyLoad.load([
+            //{
+            //    //name: 'AceApp',
+            //    //files: ['TicketJS/Ticket/Profile.js']
+            //}, ])
+                //}]
+            //}
         })
 
     //$routeProvider
