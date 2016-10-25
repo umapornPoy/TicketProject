@@ -74,6 +74,19 @@ app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
             }, ])
                 }]
             }
+        }).state('Search', {
+            url: "/Search",
+            templateUrl: 'Ticket/Search',
+            //controller: 'NotAssignController',
+            resolve: {
+                lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+            {
+                //name: 'AceApp',
+                //files: ['TicketJS/Ticket/NotAssign.js']
+            }, ])
+                }]
+            }
 
         }).state('Profile', {
             url: "/Profile",
