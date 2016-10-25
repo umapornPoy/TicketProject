@@ -1,38 +1,50 @@
-﻿<div class="page-header">
-    <h3 style="color:steelblue">
-            All Ticket(s)
-    </h3>
+﻿<div row>
+    <div class="page-header">
 
-</div><!-- /.page-header -->
-
-<div class="row" >
-    <div class="col-md-12 col-xs-12">
-        
-        <div class="demo-container">
-
-            <div id="gridContainer" dx-data-grid="dataGridOptions"></div>
+        <div class="col-md-12 col-xs-12">
+            <h3 style="color:steelblue">
+                All Ticket(s)
+                <a ui-sref="#" class="btn btn-grey pull-right">
+                    <i class="ace-icon fa fa-refresh"></i>Reset
+                </a>
+                <a ui-sref="Search" class="btn btn-info pull-right">Search Ticket
+                </a>               
+            </h3>
+          <br />
         </div>
+    </div>
+</div>
+     <!-- /.page-header -->
 
-    </div><!-- /.col -->
-</div><!-- /.row -->
 
-<style>
-   #gridContainer {
-    height: auto;
-}
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
 
-#eventContainer {
-    border: 1px solid lightgray;
-    margin-top: 20px;
-    min-height: 50px; 
-    padding: 5px;
-}
+                <div class="demo-container">
 
-#eventContainer .eventLog {
-    margin-top: 5px;
-}
+                    <div id="gridContainer" dx-data-grid="dataGridOptions"></div>
+                </div>
 
-#clearLog {
-    float: right;
-}
-</style>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+
+        <style>
+            #gridContainer {
+                height: auto;
+            }
+
+            #eventContainer {
+                border: 1px solid lightgray;
+                margin-top: 20px;
+                min-height: 50px;
+                padding: 5px;
+            }
+
+                #eventContainer .eventLog {
+                    margin-top: 5px;
+                }
+
+            #clearLog {
+                float: right;
+            }
+        </style>
