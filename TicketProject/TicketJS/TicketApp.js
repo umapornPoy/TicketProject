@@ -1,7 +1,8 @@
 ﻿/// <reference path="Ticket/OpenTicket.js" />
 /// <reference path="Ticket/OpenTicket.js" />
-var app = angular.module('TicketApp', ['ui.router', 'oc.lazyLoad', 'dx', 'summernote', 'AxelSoft']);
+var app = angular.module('TicketApp', ['ui.router', 'oc.lazyLoad', 'dx', 'summernote', 'AxelSoft','flow']);
 app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
+
 
         $urlRouterProvider.otherwise("/")
         $stateProvider.state('/Home', {
@@ -91,17 +92,18 @@ app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
         }).state('Profile', {
             url: "/Profile",
             templateUrl: 'Home/Profile',
-            //controller: 'HomeController',
-            //resolve: {
-            //    lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
-            //        return $ocLazyLoad.load([
-            //{
-            //    //name: 'AceApp',
-            //    //files: ['TicketJS/Ticket/Profile.js']
-            //}, ])
-                //}]
-            //}
+            controller: 'ProfileController',
+            resolve: {
+                lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+            {
+                name: 'AceApp',
+                files: ['TicketJS/Home/Profile.js']
+            }, ])
+                }]
+            }
         })
+   
 
     //$routeProvider
     //    .when("/", {
@@ -122,4 +124,5 @@ app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
     //    .otherwise({
     //        templateUrl: "/"
     //    })
+      
 });

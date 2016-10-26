@@ -1,97 +1,131 @@
-﻿<div class="page-content">
-    <div class="page-header">
-        <h1>
-            Manange Staffs
-            <small>
-                <i class="ace-icon fa fa-angle-double-right"></i>
-                {{ today | date : "'Date :' d MMMM y , h:mm:ss a" }}
-            </small>
-        </h1>
-    </div><!-- /.page-header -->
-    <div class="row">
-        <div class="col-sm-12">
-            <form class="form-horizontal" role="form">
-                <div class="form-group ">
-                    <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Staff Role : </label>
-                    <div class="col-sm-7 has-error">
-                        <div custom-select="m.MerchantID as m.MerchantName for m in merchants | filter: $searchTerm" ng-model="MerchantID" ng-change="merchantChange()"></div>
-                    </div>
-                </div>
+﻿<style>
+    .thumbnail {
+        max-width: 200px;
+        max-height: 200px;
+        line-height: 20px;
+        margin-bottom: 5px;
+    }
+</style>
 
-                <div class="form-group">
-                    <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> First Name : </label>
-                    <div class="col-sm-7 has-error">
-                        <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
-                    </div>
-                </div>
+    <div class="page-content" ng-controller="ProfileController">
+        <div class="page-header">
+            <h1>
+                Manange Staffs
+                <small>
+                    <i class="ace-icon fa fa-angle-double-right"></i>
+                    {{ today | date : "'Date :' d MMMM y , h:mm:ss a" }}
+                </small>
+            </h1>
+        </div><!-- /.page-header -->
 
-                <div class="form-group">
-                    <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Last Name : </label>
-                    <div class="col-sm-7 has-error">
-                        <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
-                    </div>
-                </div>
+        <div class="row">
+           <div class="col-md-3">
+               <div flow-init="{target: '/upload'}"
+                    flow-files-submitted="$flow.upload()"
+                    flow-file-success="$file.msg = $message"
+                    flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]">
+                   
+                       <div class="thumbnail" ng-hide="$flow.files.length">
+                           <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" />
+                       </div>
+                       <div class="thumbnail" ng-show="$flow.files.length">
+                           <img flow-img="$flow.files[0]" />
+                       </div>
+                   <div>
+                       <span class="btn" ng-hide="$flow.files.length" flow-btn flow-attrs="{accept:'image/*'}">Upload File</span>
+                       <span class="btn" ng-show="$flow.files.length" flow-btn flow-attrs="{accept:'image/*'}">Change</span>
+                       <span class="btn btn-danger" ng-show="$flow.files.length"
+                          ng-click="$flow.cancel()">Remove</span>
+                   </div>
+                       
+                      
+               </div>
+           </div>
 
-                <div class="form-group">
-                    <label class="col-sm-5 control-label no-padding-right" for="form-field-1">Staff Email : </label>
-                    <div class="col-sm-7 has-error">
-                        <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+            <div class="col-md-9">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group ">
+                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Staff Role : </label>
+                        <div class="col-sm-7 has-error">
+                            <div custom-select="m.MerchantID as m.MerchantName for m in merchants | filter: $searchTerm" ng-model="MerchantID" ng-change="merchantChange()"></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="col-sm-5 control-label no-padding-right" for="form-field-1">Staff Code : </label>
-                    <div class="col-sm-7">
-                        <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> First Name : </label>
+                        <div class="col-sm-7 has-error">
+                            <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="col-sm-5 control-label no-padding-right" for="form-field-1">Password: : </label>
-                    <div class="col-sm-7">
-                        <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Last Name : </label>
+                        <div class="col-sm-7 has-error">
+                            <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="col-sm-5 control-label no-padding-right" for="form-field-1">Activated Staff: </label>
-                    <div class="col-sm-7">
-                        <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1">Staff Email : </label>
+                        <div class="col-sm-7 has-error">
+                            <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="col-sm-5 control-label no-padding-right" for="form-field-1">Receive Email At Open Ticket : </label>
-                    <div class="col-sm-7">
-                        <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1">Staff Code : </label>
+                        <div class="col-sm-7">
+                            <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="col-sm-5 control-label no-padding-right" for="form-field-1">Setting System : </label>
-                    <div class="col-sm-7">
-                        <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1">Password: : </label>
+                        <div class="col-sm-7">
+                            <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+                        </div>
                     </div>
-                </div>
-            </form>
+
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1">Activated Staff: </label>
+                        <div class="col-sm-7">
+                            <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1">Receive Email At Open Ticket : </label>
+                        <div class="col-sm-7">
+                            <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1">Setting System : </label>
+                        <div class="col-sm-7">
+                            <input type="text" id="form-field-1" class="col-xs-12 col-sm-12" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
         </div>
-            
-    </div>
-    <div class="clearfix form-actions">
-        <div class="col-sm-offset-4 col-md-9">
-            <button class="btn btn-success" type="button">
-                <i class="ace-icon fa fa-check bigger-110"></i>
-                Submit
-            </button>
+        <div class="clearfix form-actions">
+            <div class="col-sm-offset-4 col-md-9">
+                <button class="btn btn-success" type="button">
+                    <i class="ace-icon fa fa-check bigger-110"></i>
+                    Submit
+                </button>
 
-            &nbsp; &nbsp; &nbsp;
-            <button class="btn btn-danger" type="reset">
-                <i class="ace-icon fa fa-backward bigger-110"></i>
-                Back
-            </button>
+                &nbsp; &nbsp; &nbsp;
+                <button class="btn btn-danger" type="reset">
+                    <i class="ace-icon fa fa-backward bigger-110"></i>
+                    Back
+                </button>
+            </div>
         </div>
     </div>
-</div>
+
 <script type="text/javascript">
         jQuery(function ($) {
 

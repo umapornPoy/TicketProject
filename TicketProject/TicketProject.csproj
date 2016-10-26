@@ -984,6 +984,11 @@
     <Content Include="scripts\jszip.js" />
     <Content Include="scripts\jszip.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\ng-flow\angular-flow.js" />
+    <Content Include="scripts\ng-flow\ng-flow-standalone.js" />
+    <Content Include="scripts\ng-flow\ng-flow-standalone.min.js" />
+    <Content Include="scripts\ng-flow\ng-flow.js" />
+    <Content Include="scripts\ng-flow\ng-flow.min.js" />
     <Content Include="scripts\summernote\angular-summernote.min.js" />
     <Content Include="scripts\summernote\summernote.css" />
     <Content Include="scripts\summernote\summernote.min.js" />
@@ -3409,6 +3414,7 @@
     <Content Include="Template\dist\js\ace-small.min.js" />
     <Content Include="Template\dist\js\ace.min.js" />
     <Content Include="TicketJS\app.js" />
+    <Content Include="TicketJS\Home\Profile.js" />
     <Content Include="TicketJS\TicketApp.js" />
     <Content Include="TicketJS\Ticket\AllTicket.js" />
     <Content Include="TicketJS\Ticket\MyTicket.js" />
