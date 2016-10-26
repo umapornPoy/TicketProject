@@ -3795,7 +3795,6 @@
     <Content Include="Views\Ticket\MyTicket.cshtml" />
     <Content Include="Views\Ticket\NotAssign.cshtml" />
     <Content Include="Views\Home\Profile.cshtml" />
-    <Content Include="Views\Ticket\Search.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
