@@ -1,4 +1,5 @@
-﻿<div row>
+﻿
+<div row>
     <div class="page-header">
 
         <div class="col-md-12 col-xs-12">
@@ -16,21 +17,103 @@
      <!-- /.page-header -->
 
 
-<div class="modal" id="modal_basic2" tabindex="-1" role="dialog" aria-labelledby="defModalHead" aria-hidden="true" align="center">
+<div class="modal" id="modal_basic2" tabindex="-1" role="dialog" aria-labelledby="defModalHead" aria-hidden="true" @*align="center"*@>
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" style="color:black"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="defModalHead" style="color:black">Search Criteria</h4>
+                <h4 class="modal-title" id="defModalHead" style="color:gray"><strong>Search Criteria</strong></h4>
             </div>
             <div class="modal-body">
-                <h2>Thankyou</h2>
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="checkbox">
+                            <label class="col-sm-2 control-label">Search Status :</label>
+                            <label class="block">
+                                <input name="form-field-checkbox" type="checkbox" class="ace input-lg" />
+                                <span class="lbl bigger"> All Status</span>
+                                <input name="form-field-checkbox" type="checkbox" class="ace input-lg"/>
+                                <span class="lbl bigger"> Opened</span>
+                                <input name="form-field-checkbox" type="checkbox" class="ace input-lg" />
+                                <span class="lbl bigger"> Assigned</span>
+                                <input name="form-field-checkbox" type="checkbox" class="ace input-lg" />
+                                <span class="lbl bigger"> Closed</span>
+                                <input name="form-field-checkbox" type="checkbox" class="ace input-lg" />
+                                <span class="lbl bigger"> Approved</span>
+                                <input name="form-field-checkbox" type="checkbox" class="ace input-lg" />
+                                <span class="lbl bigger"> Reopen</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label"> Ticket Group :</label>
+                            <div class="col-sm-8">
+                                <select class="selectpicker form-control">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label"> Person in charge (PIC) :</label>
+                            <div class="col-sm-8">
+                                <select class="selectpicker form-control">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-sm-5 control-label"> Merchant Name :</label>
+                            <div class="col-sm-8">
+                                <select class="selectpicker form-control">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-5 control-label"> Brand Name :</label>
+                            <div class="col-sm-8">
+                                <select class="selectpicker form-control">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-5 control-label"> Brand Name :</label>
+                            <div class="col-sm-8">
+                                <select class="selectpicker form-control">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                    </div>
+              
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal"><i class="ace-icon fa fa-search"></i>Search</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-info" data-dismiss="modal"><i class="ace-icon fa fa-search"></i>Search</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
-        </div>
     </div>
 </div>
 
