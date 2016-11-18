@@ -22,7 +22,7 @@ namespace TicketProject.Controllers
             return View();
         }
 
-        public ActionResult Profile()
+        public ActionResult Profiles()
         {
             return View();
         }

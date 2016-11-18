@@ -47,7 +47,9 @@
 
 <body class="no-skin">
     <!-- #section:basics/navbar.layout -->
-    <div id="navbar" class="navbar navbar-default" ng-include="'Home/Navbar'"></div>
+    <div id="navbar" class="navbar navbar-default">
+        <ng-include src="'Home/Navbar'"></ng-include>
+    </div>
 
     <!-- /section:basics/navbar.layout -->
     <div class="main-container ace-save-state" id="main-container">
@@ -180,7 +182,6 @@
     <link href="~/scripts/custom-select/style.css" rel="stylesheet" />
 
     <!--browse picture-->
-    <script src="~/scripts/ng-flow/angular-flow.js"></script>
     <script src="~/scripts/ng-flow/ng-flow-standalone.js"></script>
     <script src="~/scripts/ng-flow/ng-flow-standalone.min.js"></script>
     <script src="~/scripts/ng-flow/ng-flow.js"></script>
