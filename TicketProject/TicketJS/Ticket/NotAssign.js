@@ -11,9 +11,16 @@
         $scope.showBorders = true;
         $scope.rowAlternationEnabled = true;
 
+        //if ($location.path() == "/AllTicket") {
+        //    $scope.StatusID = 1;
+        //} else {
+        //    $scope.StatusID = 2;
+        //}
+
         $scope.dataGridOptions = {
             dataSource: $scope.TicketInfo,
-
+            //rowTemplate: $("#gridRow"),
+            columnWidth: "auto",
             paging: {
                 enabled: false
             },
@@ -27,6 +34,7 @@
                 visible: true,
                 width: 250
             },
+
             paging: {
                 pageSize: 12
             },
@@ -37,8 +45,8 @@
 
             columns: [
                 {
-                    dataField: "MerchantID",
-                    caption: "Merchant Name",
+                    dataField: "BrandName",
+                    caption: "Brand Name",
                     width: 150
 
                 },
@@ -79,22 +87,40 @@
                    width: 130,
                    alignment: "center",
                    cellTemplate: function (container, item) {
-                       var data = item.data,
-                           markup = /*"<div class='hidden-sm hidden-xs btn-group'>"
-                                + "<button class='btn btn-warning btn-xs btn-round' onclick='EditDistributorsVendor(" + data.TicketNumber + ")'>"
-                                + "<i class='ace-icon fa fa-pencil icon-only bigger-120'></i>"
-                                + "</button>"
 
-                                + "<button class='btn btn-warning btn-xs btn-round' onclick='EditDistributorsVendor(" + data.TicketNumber + ")'>"
-                                + "<i class='ace-icon fa fa-pencil icon-only bigger-120'></i>"
-                                + "</button>"
-                                + "</div>"  */
-                                   "<span class='label label-lg label-danger arrowed-in'>Closed</span>";
-                       //+"<span class='label label-lg label-pink arrowed arrowed-right'>Open</span>"
-                       //+"<span class='label label-lg label-warning arrowed'>Assigned</span>"
-                       //+"<span class='label label-lg label-info arrowed-in arrowed-in-right'>Approve</span>"
-                       //+"<span class='label label-lg label-success arrowed-right'>Reopen</span>";
-                       container.append(markup);
+                       if (item.data.StatusID == 1) {
+                           var data = item.data,
+
+                           markup = "<span class='label label-lg label-pink arrowed arrowed-right'>Open</span>"
+                           container.append(markup);
+                       }
+
+                       if (item.data.StatusID == 2) {
+                           var data = item.data,
+                           markup = "<span class='label label-lg label-warning arrowed'>Assigned</span>"
+                           container.append(markup);
+                       }
+
+                       if (item.data.StatusID == 3) {
+                           var data = item.data,
+
+                           markup = "<span class='label label-lg label-danger arrowed-in'>Closed</span>"
+                           container.append(markup);
+                       }
+
+                       if (item.data.StatusID == 4) {
+                           var data = item.data,
+
+                           markup = "<span class='label label-lg label-info arrowed-in arrowed-in-right'>Approve</span>"
+                           container.append(markup);
+                       }
+
+                       if (item.data.StatusID == 5) {
+                           var data = item.data,
+
+                           markup = "<span class='label label-lg label-success arrowed-right'>Reopen</span>"
+                           container.append(markup);
+                       }
                    }
                }, {
                    caption: "Action",
@@ -110,6 +136,7 @@
                        container.append(markup);
                    }
                }
+
             ]
 
         };

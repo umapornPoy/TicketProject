@@ -1,3 +1,4 @@
+/// <reference path="angular-bootstrap-multiselect.js" />
 "use strict";
 
 angular.module("ui.multiselect", ["multiselect.tpl.html"])

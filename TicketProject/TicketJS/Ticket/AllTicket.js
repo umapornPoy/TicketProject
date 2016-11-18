@@ -47,13 +47,11 @@
             {
                 dataField: "BrandName",
                 caption: "Brand Name",                
-                width: 150
 
             },
             {
                 dataField: "TicketNumber",
                 caption: "Ticket Info",
-                width: 150,
                 cellTemplate: function (container, item) {
                     var data = item.data,
                         markup = "<a href='#/ReplyTicket/" + data.TicketNumber + "'>" + data.TicketNumber + "</a>";
@@ -62,20 +60,17 @@
             },
             {
                 dataField: "TicketTitle",
-                caption: "Ticket Title",
-                width: 270,   
+                caption: "Ticket Title",  
             },
             
             //"Ticket Group",
             {
                 dataField: "OpenBy",
                 caption: "Open By",
-                width: 130
             },
             {
                 dataField: "OpenDate",
                 caption: "Open Date",
-                width: 150,
                
             }//, {
                // dataField: "BirthDate",
@@ -84,7 +79,6 @@
            // }
            , {
                dataField: "Status",
-                width: 130,
                 alignment: "center",
                 cellTemplate: function (container, item) {
 
@@ -125,7 +119,6 @@
             }, {
                 caption: "Action",
                 dataField: "delete",
-                width: 130,
                 alignment: "center",
                 cellTemplate: function (container, item) {
                     var data = item.data,
