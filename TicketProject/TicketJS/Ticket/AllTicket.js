@@ -1,4 +1,4 @@
-﻿angular.module('TicketApp').controller('AllTicketController', ['$scope', '$http', function ($scope, $http) {
+﻿angular.module('TicketApp').controller('AllTicketController', ['$scope', '$http','$filter', function ($scope, $http, $filter) {
 
     $http.get("http://localhost:55795/api/TicketApi/ticketInfo").success(function (data) {
         $scope.TicketInfo = data;
@@ -53,8 +53,11 @@
                 dataField: "TicketNumber",
                 caption: "Ticket Info",
                 cellTemplate: function (container, item) {
+                    //var FilterTicketInfo = $filter('filter')($scope.TicketInfo, { TicketNumber: TicketNumber });
+                    //console.log(FilterTicketInfo);
+                    //localStorage.setItem('TicketNumber', FilterTicketInfo[0].TicketNumber);
                     var data = item.data,
-                        markup = "<a href='#/ReplyTicket/" + data.TicketNumber + "'>" + data.TicketNumber + "</a>";
+                        markup = "<a href='#/ReplyTicket/" + data.TicketNumber + "'>" + data.TicketNumber + "</a>";                 
                     container.append(markup);
                 }
             },
