@@ -75,9 +75,9 @@ app.config(function ($urlRouterProvider, $stateProvider, $ocLazyLoadProvider) {
             }, ])
                 }]
             }        
-        }).state('Profile', {
-            url: "/Profile",
-            templateUrl: 'Home/Profile',
+        }).state('Profiles', {
+            url: "/Profiles",
+            templateUrl: 'Home/Profiles',
             controller: 'ProfileController',
             resolve: {
                 lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
